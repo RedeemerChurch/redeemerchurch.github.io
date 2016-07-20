@@ -1,2 +1,2 @@
-# redeemerchurch.github.io
+# redeemerchurch.co.nz
 Redeemer Church Website
