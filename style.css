@@ -1,0 +1,711 @@
+/* ------ IMPORTING FONTS  --- */
+@font-face {
+  font-family: 'sansationLight';
+  src: url('sansation_light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sansationRegular';
+  src: url('sansation_regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sansationBold';
+  src: url('sansation_bold.ttf') format('truetype');
+}
+
+/* -------- General ------------ */
+body, html, footer {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.button, button {
+  margin-bottom: 0;
+}
+
+#containerTitle {
+  padding-bottom: 1.0rem;
+  color: rgb(229,66,41);
+  text-align: center;
+  font-family: 'sansationBold', Georgia;
+  font-size: 2.5em;
+}
+
+.container {
+  max-width: 1200px;
+  padding-top: 4.5rem;
+  padding-bottom:  4.5rem
+}
+
+.container::after {
+  padding-bottom: 0px;
+}
+
+footer .container::after {
+  padding-bottom: 0;
+}
+
+/* -------- Navigation Bar ---------- */
+/* Whilst tied to to the top */
+ .navBar .container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 80px;
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 3;
+    top: 0;
+}
+
+.navBar .menuBtn {
+    display: none;
+}
+
+.navBar a img {
+  height: 60px;
+  width: auto;
+  float: left;
+  padding-right: 30px;
+}
+
+.navBar ul {
+  width: auto;
+  margin: 0 auto;
+  max-width: 50%;
+  padding-top: 8px;
+}
+
+.navBar li {
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 1rem;
+}
+
+@media (min-width: 800px) {
+  .opaque-sidepanel {
+    display: none;
+  }
+
+  .responsive-menu {
+    display: none;
+  }
+}
+
+/* Mainpulating the text behaviour in the navBar */
+.navBar li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navBar li a:hover{
+    color: rgb(200,50,50);
+    text-decoration: none;
+}
+
+ .navBar::after {
+        content:'';
+        width:100%;
+        position: absolute;
+        left:0;
+        bottom:-1px;
+        height: 2px;
+        background: rgb(229,66,41);
+
+}
+
+/* Mobile Menu */
+/* Media hooks */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries */
+@media (max-width: 1150px) {
+  .navBar .container ul {
+    max-width: none;
+    width: auto;
+    float: right;
+  }
+}
+
+@media (max-width: 800px) {
+    .navBar .container ul {
+        display: none;
+    }
+
+    .navBar ul {
+        display: block;
+        max-width: 75%;
+    }
+
+    .navBar .container {
+      height: 53px !important;
+      position: initial !important;
+    }
+
+    .navBar .container a img {
+      height: 40px !important;
+      transform: translateY(-3px);
+    }
+
+    .mainLanding {
+      margin-top: 53px !important;
+    }
+
+    /* Menu button styling */
+    .navBar .container .menuBtn {
+      display: block;
+      margin: auto;
+      position: relative;
+      float: right;
+      cursor: pointer;
+      padding: 9px 10px;
+      z-index: 10;
+    }
+
+    .navBar .container .menuBtn span {
+      display: block;
+      background-color: #000;
+      height: 3px;
+      width: 22px;
+      transition: transform 0.2s;
+      transform-origin: 0.5px;
+    }
+
+    .navBar .container .menuBtn span+span {
+      margin-top: 5px;
+    }
+
+    .toggled .hamburger-bun-top {
+      transform: rotate(45deg);
+      width: 24px !important;
+      margin-right: -5px;
+      background-color: #fff !important;
+    }
+
+    .toggled .hamburger-patty {
+      opacity: 0;
+      transition: all 0.1s linear;
+    }
+
+    .toggled .hamburger-bun-bottom {
+      transform: rotate(-45deg);
+      width: 24px !important;
+      margin-right: -5px;
+      background-color: #fff !important;
+    }
+
+    /* Menu bar coming out */
+    body.sidepanel-open {
+      overflow: hidden;
+      padding-right: 17px;
+    }
+
+    body.sidepanel-open .opaque-sidepanel {
+      content: "\A";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0, left: 0;
+      background-color: #000;
+      opacity: 0.8;
+      z-index:3;
+      margin-top: -53px;
+    }
+
+    .responsive-menu {
+      position: fixed;
+      background-color: rgb(65,65,65);
+      height: 100%;
+      width: 75%;
+      z-index: 4;
+      margin-top: -53px;
+      right: 0;
+      transform: translatex(100%);
+      transition: all 0.5s;
+    }
+
+    .responsive-menu .menu-container {
+      margin-top: 50px;
+      margin-left: 20px;
+      width: 80%;
+    }
+
+    .responsive-menu .menu-container span {
+      background-color: rgb(229,66,41);
+      width: 100%;
+      height: 2px;
+      position: relative;
+      display: block;
+      }
+
+    .responsive-menu .menu-container ul {
+          display: block;
+          position: relative;
+          padding: 10px 0px;
+          margin-left: 20px;
+      }
+
+      .responsive-menu .menu-container li {
+          margin-right: 20px;
+          width: 100%
+      }
+
+    .responsive-menu .menu-container li a {
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .responsive-menu .menu-container .logo-menu-footer {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .responsive-menu .menu-container .logo-menu-footer img {
+      height: 40px;
+      height: 40px !important;
+      width: auto;
+    }
+
+    .responsive-menu.open {
+      overflow: hidden;
+      transform: translateX(0);
+      transition: all 0.5s;
+    }
+}
+
+/* --------- LandingImage ----- */
+.mainLanding {
+  /* background-color: rgb(220,50,50); */
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-size: cover;
+    background-image: url("img/placeHolderImg.jpg");
+    min-height: 270px;
+    margin-top: 80px;
+    color: white;
+    line-height: 300px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .mainLanding {
+      display: none;
+    }
+}
+
+/* ---------- About Us -------------- */
+.aboutUs {
+  background-color: rgb(255,255,255);
+  padding-top: 80px;
+}
+
+.aboutUs .image {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 140px;
+}
+
+.aboutUs .inset-container {
+  margin: 20px 15px;
+  height: 100%;
+}
+
+.inset-container img {
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.inset-container p.about {
+  width: 75.5%;
+  margin: 0 auto;
+  padding-top: 1.0rem;
+}
+
+.aboutUs a {
+  color: rgb(229,66,41);
+  text-decoration: none;
+}
+
+.aboutUs p.about-intro {
+  text-align: center;
+  padding-top: 2.0rem;
+  font-family: 'sansationLight', serif;
+  text-transform: uppercase;
+  color: rgb(229,66,41);
+  font-size: 1.1em;
+  margin-bottom: 1.0rem;
+}
+
+.aboutUs .row.bottom {
+  margin-bottom: 2.0rem;
+}
+
+@media (max-width: 550px) {
+  .inset-container p.about {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+  }
+
+  .inset-container {
+    margin: 20px 0px;
+  }
+
+  p.about-intro {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutUs {
+    padding-top: 53px;
+  }
+}
+
+/* -------- Youth Ministry ------------ */
+.youthMinistry {
+  background-color: rgb(229,64,41);
+  color: rgb(245,245,245);
+}
+
+.youthMinistry p {
+  margin-bottom: 1rem;
+}
+
+.facebook-button {
+  padding: 5px;
+  margin: auto;
+  width: 140px;
+  background-color: rgb(229,66,41);
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 2.25rem;
+
+  /* Hover off */
+  transition: background-color 0.15s ease-in;
+}
+
+.facebook-button span {
+  vertical-align: middle;
+}
+
+.facebook-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.facebook-button img {
+  height: 35px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.facebook-button:hover {
+  background-color: rgb(35,35,35);
+  transition: background-color 0.15s ease-in;
+}
+
+/* Scripture 19 plug */
+.hero-scripture {
+  background-color: rgb(35,35,35); /*Fallback */
+  color: rgb(255,255,255);
+}
+
+.hero-scripture .container {
+  color: rgb(160,160,160);
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+  max-width: 450px;
+  margin: auto;
+}
+
+.hero-scripture p.scriptureRef {
+  color: rgb(229,66,41);
+  margin-bottom: 0px;
+}
+
+.hero-scripture strong {
+  color: rgb(229,66,41);
+}
+
+.hero-scripture .scriptureRef {
+    float: right;
+}
+
+.hero-scripture a {
+  color: rgb(229,66,41);
+  text-decoration: none;
+}
+
+.hero-scripture sup {
+  color: rgb(255,255,255);
+}
+
+.hero-scripture p.scripture {
+  margin: 0;
+}
+
+/* ----- Location ------ */
+.location {
+  background-color: rgb(255,255,255);
+}
+
+.location .container {
+  padding-bottom: 0px;
+}
+
+.locationText p {
+  margin-bottom: 1rem;
+}
+
+.mapContainer #map {
+  margin: 0;
+  width: 98%;
+  padding-top: 56.25%; /* slope */
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .mapContainer #map {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 750px;
+  }
+}
+
+@media (max-width: 550px) {
+  .mapContainer #map {
+    height: 960px;
+    height: 75vh;
+    padding-top: 10%;
+  }
+}
+
+.location .container::after {
+  padding-bottom: 0 !important;
+}
+
+/* ------- Colour to break up items */
+.redSplit {
+  background-color: rgb(224,64,40);
+  height: 6px;
+}
+
+/* --- ContactUs ------ */
+.contactUs {
+  background-color: rgb(35,35,35);
+}
+
+.contactUs a {
+  color: rgb(229,66,41);
+  text-decoration: underline;
+}
+
+.contactUs .container {
+  color: rgb(160,160,160);
+  padding-top: 3rem;
+}
+
+.contactUs .four.columns {
+  height: 100%;
+}
+
+.contact-details.right {
+   display: inline-block;
+   float: right;
+   margin-left: 2.0rem;
+}
+
+.contact-details.left {
+  display: inline-block;
+  float: left;
+}
+
+@media (max-width: 900px) {
+  .contact-details {
+     display: block;
+     width: 100%;
+  }
+
+  .contact-details.right {
+    float: left;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .contact-details.right {
+    margin-right: 7.5%;
+  }
+}
+
+/* ------------- Declaration page --------- */
+.divider {
+  height: 2.0px;
+  width: 55%;
+  border-top: 1px solid rgb(0,0,0);
+  border-bottom: 1px solid rgb(0,0,0);
+  margin: 0 auto;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+p {
+  font-size: 1.0em;
+}
+
+ol {
+  margin: 0 0 1.5em;
+  padding: 0;
+  padding-left: 2rem;
+  counter-reset: item;
+}
+
+.content-wrapper li {
+  margin-bottom: 0.5rem;
+}
+
+ol > li {
+  margin: 0;
+  padding: 0 0 0 2em;
+  text-indent: -2em;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ol > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}
+
+.content-wrapper li::after {
+  content: ",";
+}
+
+.content-wrapper li:last-child::after {
+  content: ".";
+}
+
+.header-image {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 140px;
+}
+
+.christian .container {
+  margin-top: 5.0rem;
+}
+
+.evangelical .container::after {
+  padding-bottom: 0px;
+}
+
+.header-image img {
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.core-beliefs {
+  background-color: rgb(210,210,210);
+  color: black;
+}
+
+.content-wrapper a {
+  text-decoration: none;
+  color: rgb(229,66,41);
+}
+
+.header {
+  padding-top: 80px;
+  background-color: rgb(35,35,35);
+  color: white;
+}
+
+.header .container {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding-top: 53px;
+  }
+}
+
+/* -------- Footer ------- */
+footer {
+  background-color: rgb(65,65,65);
+}
+
+footer .container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(210,210,210);
+}
+
+footer p {
+  top: 0;
+  transform: translateY(-20%);
+  text-align: center;
+}
+
+.center-text  {
+  float: left;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+footer img {
+  max-height: 2.3em;
+  max-width: auto;
+  padding-right: 2.5px;
+  padding-left: 1px;
+  transform: translateY(40%);;
+}
+
+@media (max-width: 450px) {
+  footer .desktop.container {
+    display: none;
+  }
+
+  footer .mobile-responsive.container {
+    display: block;
+    padding-top: 20px;
+  }
+
+  footer p {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  footer p {
+    margin-bottom: -15px;
+  }
+}
+
+@media (min-width: 450.1px) {
+  footer .mobile-responsive.container {
+    display: none;
+  }
+
+  footer .desktop.container {
+    display: block;
+  }
+}

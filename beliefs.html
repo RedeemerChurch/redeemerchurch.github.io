@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Redeemer Church | What we believe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Adding all CSS stylings -->
+    <link rel="shortcut icon" href="img/rChurchFavicon.gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <!-- Adding all JS & JQuery items -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    $(function() {
+      $(".navBar ul a").click(function(clickEvent) {
+        var linkTarget = $(clickEvent.currentTarget);
+        var navBarHeight = $(".navBar").height();
+        var topOfElement = $( linkTarget.attr("href") ).offset().top - navBarHeight;
+
+        if ($("body").hasClass("sidepanel-open")) {
+          $(".menuBtn").removeClass("toggled");
+          $(".responsive-menu").removeClass("open");
+          $("body").removeClass("sidepanel-open");
+        }
+
+        $("body").animate({
+          scrollTop: topOfElement
+        }, 500);
+
+          clickEvent.preventDefault();
+          return false;
+      });
+
+    // To toggle menu btn states
+      $(".menuBtn").click( function() {
+        $(".menuBtn").toggleClass("toggled");
+        $(".responsive-menu").toggleClass("open");
+        $("body").toggleClass("sidepanel-open");
+      });
+    });
+    </script>
+  </head>
+
+  <body>
+    <div class="navBar">
+        <div class="container">
+            <div class="menuBtn">
+                <span class="hamburger-bun-top"></span>
+                <span class="hamburger-patty"></span>
+                <span class="hamburger-bun-bottom"></span>
+            </div>
+            <a href="http://www.redeemerchurch.co.nz"><img src="img/logoNoBackgroundBlackText.svg" /></a>
+            <ul>
+              <li><a href="index.html#aboutUs">Who we are</a></li>
+              <li><a href="index.html#youth">Youth Ministry</a></li>
+              <li><a href="index.html#sermons">Sermons</a></li>
+              <li><a href="index.html#location">Location</a></li>
+              <li><a href="index.html#contact">Contact us</a></li>
+            </ul>
+          </div>
+      <div class="responsive-menu">
+          <div class="menu-container">
+            <span class="top-line"></span>
+              <ul>
+                <li><a href="index.html/#aboutUs">Who we are</a></li>
+                <li><a href="index.html#youth">Youth Ministry</a></li>
+                <li><a href="index.html#sermons">Sermons</a></li>
+                <li><a href="index.html#location">Location</a></li>
+                <li><a href="index.html#contact">Contact us</a></li>
+              </ul>
+            <span class="bottom-line"></span>
+            <div class="logo-menu-footer">
+              <img src="img/logoNoBackgroundWhiteText.svg" />
+            </div>
+          </div>
+      </div>
+      <div class="opaque-sidepanel"></div>
+    </div>
+
+  <div class="content-wrapper">
+    <div class="header">
+      <div class="container">
+        <h5 id="containerTitle">What is Redeemer Church?</h5>
+        <p>The basic answer is we are firstly Christians, secondly Evangelicals, thirdly Missional and fourthly we are Reformed. So what does that all mean?</p>
+      </div>
+    </div>
+
+    <div class="christian">
+      <div class="container">
+        <div class="header-image"><img src="img\christian.svg" /></div>
+        <h5 id="containerTitle"><strong>We are Christian</strong></h5>
+        <p>This distinguishes us from other world religions and cults. Therefore, we agree with foundational orthodox Christinaity as founded upon both the Apostles and Nicene Creeds.</p>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+    <div class="evangelical">
+      <div class="container">
+        <div class="header-image"><img src="img\evangelical.svg" /></div>
+        <h5 id="containerTitle"><strong>We are Evangelical</strong></h5>
+        <p>Therefore, we affirm the following points;</p>
+        <ol>
+          <li>We believe the Bible to be the inspired, the only infallible, authoritative Word of God</li>
+          <li>We believe that there is one God, eternally existent in three persons: Father, Son and Holy Spirit</li>
+          <li>We believe in the deity of our Lord Jesus Christ, in His virgin birth, in His sinless life, in His bodily resurrection, in His ascension to the right hand of the Father, and in His personal return to earth in power and glory</li>
+          <li>We believe that for salvation of lost and singul people, regeneration by the Holy Spirit is absolutely essential</li>
+          <li>We believe in the present ministry of the Holy Spirit by whoe indwelling the Christian is enabled to lieve a godly life</li>
+          <li>We believe in the spiritual unity of believers in our Lord Jesus Christ</li>
+        </ol>
+
+        <p>For further detail see the following page <a href="http://nae.net/what-is-an-evangelical/" target="_blank"><strong>here.</strong></a>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+
+    <div class="missional">
+      <div class="container">
+        <div class="header-image"><img src="img\missional.svg" /></div>
+        <h5 id="containerTitle"><strong>We are Missional</strong></h5>
+        <p>We actively seek to share the gospel message in contextually understandable ways to those locally, nationally and internationally with a missionary outreach of compassion and ungency to the poorest of the poor and those who are yet to hear the gospel preached</p>
+        <ol>
+          <li>We believe that our local church must be faithful to the content of unchanging bible doctrine (<a href="https://www.biblegateway.com/passage/?search=Jude+3&version=ESV" target"_target"><strong>Jude 3</strong></a>)</li>
+          <li>We believe that our local church must be faithful to the continually changing context of the culture(s) in which we minister (<a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%209%3A19-23&version=ESV" target="_blank"><strong>1 Corinthians 9:19 - 23</strong></a>)</li>
+          <li>We believe that our mission is to bring people into church so that they can be trained to go out into culture as effective missionaries (<a href="https://www.biblegateway.com/passage/?search=+Mathew+28%3A+18-20&version=ESV" target="_blank"><strong>Matthew 28:18 - 20</strong></a>)</li>
+        </ol>
+        <div class="divider"></div>
+      </div>
+    </div>
+
+    <div class="reformed">
+      <div class="container">
+        <div class="header-image"><img src="img\tulip.svg" /></div>
+        <h5 id="containerTitle"><strong>We are Reformed</strong></h5>
+        <p>We acknowledge God's absolute sovereignty over all His creation and His providentially ordained purposes in and for His creation for His glory and our joy, both now and in the future. Therefore, we believe;</p>
+        <ol>
+          <li>That God created the heavens, the earth, all that is seen and also what is unseen (<a href="https://www.biblegateway.com/passage/?search=Genesis+1+&version=ESV" target="_blank"><strong>Genesis 1</strong>)</a></li>
+          <li>That God created man and woman in a state of sinless perfection with particular dignity as His image bearers on earth</li>
+          <li>Our first parents (Adam and Eve) sinned against God and that everyone since is a sinner by nature and choice. Sin has totally affected all of creation, including marring human image and likeness so that all our being is stained by sin (e.g. reasoning, desires and emotions</li>
+          <li>That becase all people have sinned and seperated themselves from the Holy God that he is obligated to save no one from the just deserved punishments of hell. We also believe that God in unparalleled love and mercy has chosen to save ssosme people for His glory</li>
+          <li>That alvation was accomplished by the sinless life, substitutionary atoning death, and literal phsical resurrection of Jesus Christ in place of His people for their sins</li>
+          <li>That salvation is by God's grace alone, shown forth in the on-going repentance of sin and faith in Jesus Christ that leads to good works</li>
+          <li>That God's saving grace is <i>ultimately</i> irresistable and that God does soften even the hardest of hears and save the worst of sinners according to His will and glory</li>
+          <li>That salvation is orgained by God in eternity past</li>
+          <li>That the gospel should be <i>passionately</i> and <i>urgently</i> proclaimed to all people so that all who believe may be saved through the preaching of God's word through the Holy Spirit</li>
+          <li>That the Church is both visible and invisible with God the judge of our hearts</li>
+          <li>That true Christians, born again of God's Spirit, will be kept by God throughout their life, as evidenced by personal transformation that includes an ever-growing love of God the Father, through God the Son, by God the Spirit, love of brothers and sisters in the Church, and love of lost neighbours in the culture</li>
+          <li>That God is Lord over all life and that there is nothing inlife that is to be separated from God</li>
+          <li>That the worship of God is the end for which people were created and that abiding joy is only to be found by delighting in God through all of life, including hardship and death, which is gain!</li>
+          <li>That through many trials and tribulations we will enter the Kingdom with joy</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="core-beliefs">
+      <div class="container">
+        <div class="header-image"></div>
+        <h5 id="containerTitle"><strong>Core beliefs at Redeemer</strong></h5>
+        <p>Beyond the four points discussed above, we also hold the following points as the basis for the teachings and ministry at Redeemer Church;</p>
+        <ol>
+          <li>We believe the Church was established and founded upon the teaching of the Apostles and the prophets with Jesus Christ as the cornerstone holding it up for his glory</li>
+          <li>We believe our primary mission is making disciples of all nations starting in our context, New Plymouth (<a href="https://www.biblegateway.com/passage/?search=Matthew+28%3A19+&version=ESV" target="_blank"><strong>Matthew 28: 19</strong></a>)</li>
+          <li>We believe the church is both visible and invisible with God the judge of our hearts</li>
+          <li>We believe complemtarian gender roles in church life and leadership</li>
+          <li>We believe in Christ centred gospel preaching, teaching and living</li>
+          <li>We believe that the Holy Spirit is active and present in convicting of sin and glorifying Jesus Christ in both the individual and corporate lives of his people and those He has called into the Kingdom</li>
+          <li>We believe God uses prophesy to edify and build up the church as per <a href="https://www.biblegateway.com/passage/?search=1+Corinthians+12&version=ESV" style="text-decoration:none"><strong>1 Corinthians 12</strong></a>, and is subservient to the doctrines of the bible. We are open but cautious regarding prophesy with the intent of testing each spirit</li>
+          <li>We believe God can and does work miraculously in the lives of people according to His will and pleasure</li>
+          <li>We believe in a believers baptism confirming their confession of faith</li>
+          <li>We believe the gift of tongues is beneficial to individual believers, and to the church if interpreted in the power of the Holy Spirit. We are open but cautious regarding the gift of tongues in the Church</li>
+          <li>We believe in church discipline as outlined in the Scriptures for the protection of the church body and the working of Gods purpose in out lives knowing that God works all things out for good for those who love him (<a href="https://www.biblegateway.com/passage/?search=romans+8%3A28&version=ESV" target="_blank"><strong>Romans 8:28</strong></a>)</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="not-believe">
+      <div class="container">
+        <div class="header-image"></div>
+        <h5 id="containerTitle">What do we at Redeemer not believe?</h5>
+        <p>To help clarify our core beliefs we believe it is helpful to declare also what we do not believe and hold to be biblical truth, so as to bring open upfront disclosure for those wishing to join us here at <strong><a href="http://www.redeemerchurch.co.nz" style="color:rgb(229,66,41); text-decoration:none">Redeemer</a></strong>.</p>
+        <ol>
+          <li>We are not liberals who embrace culture without discernment and compromise that distinctives of the gospel, but rather Christians who believe the truths of the bible are eternal and therefore fitting for every time, place and people</li>
+          <li>We are not fundamentalists who retreat from cultural involvement and transformation, but rather missionaries faithful both to the content of the bible and context of ministry</li>
+          <li>We are not isolationists and seek to partner with like minded Christians from various churches, denominations and organisations in planting church planting churches</li>
+          <li>We are not hyper-Calvinists, but rather pray, evangelise, and do good works because we believe that the sovereign plan of God is accomplished through us, his people</li>
+          <li>We are not egalitarians and do believe that men should head their homes and male elders/pastors should lead the church with masculine love like Jesus Christ</li>
+          <li>We are not Open Theists but believe in the sovereignty and foreknowledge of God in all things</li>
+          <li>We are not religious relativists and we do believe that there is no salvation apart from faith in Jesus Christ alone</li>
+          <li>We are not moralists, only seeking to help people live good lives, but instead evangelists labouring that people would become new creations in Christ</li>
+          <li>We are not relativists and do gladly embrace the bible as our highest authority above such things as culture, experience, philosophy and other forms of revelation</li>
+          <li>We are not Universalists and do believe that many people will spend eternity in the torments of hell as the bible teaches</li>
+          <li>We are not naturalists and do believe that Satan and demons are real and are enemies at work in this world and subject to God</li>
+          <li>We are not rationalists and do believe that not everything can be known but that God calls us to live by faith with mystery and partial knowledge regarding many things</li>
+          <li>We are not Christian Feminists and do believe that God reveals Himself as a Father and is to be honoured by the names he revels to us without apology</li>
+          <li>We are not embarrassed by the bloody death of Jesus Christ and do believe he died as a substitute for the sins of His people in selfless love (<a href="https://www.biblegateway.com/passage/?search=Eph+2%3A20%2C+1+Peter+2%3A6+&version=ESV" target="_blank"><strong>Eph 2:20, 1 Peter 2:6</strong></a>)</li>
+          <li>We are not ashamed and do proclaim a loving gospel of grace which sounds like foolishness and offensive to the unrepentant while saving multitudes with the good news of the gospel of Jesus Christ</li>
+          <li>We are not Hyper-Pentecostals and do not psychologise, moralise the gospel nor do we adhere to the philosophies of the health, wealth and prosperity gospel &minus; which is no gospel at all</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="redSplit"></div>
+  </div>
+
+  <div class="contactUs" id="contact">
+      <div class="container">
+          <div class="row">
+              <div class="eight columns">
+                  <h5>Contact us</h5>
+                  <p>If you would like to know more about Redeemer Church, or just to have a chat, please free to contact us!</p>
+
+                  <div class="contact-details left">
+                    <p><strong>Sean Fleming</strong>
+                      <br>Email: <a href="mailto:sean@redeemerchurch.co.nz">sean@redeemerchurch.co.nz</a>
+                      <br>Phone: 027 445 3845</p>
+
+
+                    <p><strong>Gareth Williams</strong>
+                      <br>Email: <a href="mailto:gareth@redeemerchurch.co.nz">gareth@redeemerchurch.co.nz</a>
+                      <br>Phone: 027 340 3554</p>
+                  </div>
+
+                  <div class="contact-details right">
+                    <p><strong>Mailing Address</strong>
+                      <br />Redeemer Church
+                      <br />Sean's Address[Insert this]
+                      <br />New Plymouth 4310</p>
+                  </div>
+              </div>
+
+              <div class="four columns">
+                  <h5>Links</h5>
+                  <p>Insert all the linky goodness here... </p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </body>
+
+  <footer>
+      <div class="desktop container">
+          <p class="center-text">&copy; 2016 Redeemer Church | Part of the <a href="http://www.newfrontierstogether.org/" target="_blank"><img src="img\newfrontiers-logo-glass.png" /></a> family of churches</p>
+      </div>
+
+      <div class="mobile-responsive container">
+        <p class="center-text">&copy; 2016 Redeemer Church</p>
+        <p>Part of the <a href="http://www.newfrontierstogether.org/" target="_blank"><img src="img\newfrontiers-logo-glass.png" /></a> family of churches</p>
+      </div>
+  </footer>
+
+  </html>
