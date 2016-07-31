@@ -514,6 +514,7 @@ footer .container::after {
 .contactUs .container {
   color: rgb(160,160,160);
   padding-top: 3rem;
+  padding-bottom: 0px;
 }
 
 .contactUs .four.columns {
@@ -622,7 +623,7 @@ ol > li:before {
 }
 
 .core-beliefs {
-  background-color: rgb(210,210,210);
+  background-color: rgb(190,190,190);
   color: black;
 }
 
@@ -650,13 +651,13 @@ ol > li:before {
 
 /* -------- Footer ------- */
 footer {
-  background-color: rgb(65,65,65);
+  background-color: rgb(35,35,35);
 }
 
 footer .container {
   padding-top: 10px;
   padding-bottom: 10px;
-  color: rgb(210,210,210);
+  color: rgb(190,190,190);
 }
 
 footer p {
