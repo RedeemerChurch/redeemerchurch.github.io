@@ -15,6 +15,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
     $(function() {
+
+      //change the date of copyright to always be correct
+      var currentDate = new Date();
+      var currentYear = currentDate.getFullYear();
+
       $(".navBar ul a").click(function(clickEvent) {
         var linkTarget = $(clickEvent.currentTarget);
         var navBarHeight = $(".navBar").height();
@@ -128,8 +133,8 @@
     <div class="youthMinistry" id="youth">
         <div class="container">
             <h5 id="containerTitle" style="color:rgb(242,231,102)">Redeemer Youth</h5>
-            <p>Just like with any community, youth are essential to Redeemer Church. To this end we run a youth ministry focused on meeting together in a small group format once a week, were we meet together to encourage one another, hear from God through His Word and fellowship with one another.</p>
-            <p>The R19 group run a seperate facebook page, where they push any updates and details for any upcoming event. The button below will take you to that facebook page.</p>
+            <p>Just like with any community, youth are essential to Redeemer Church. To this end we run a youth ministry focused on meeting together in a small group format once a week, where we meet together to encourage one another, hear from God through His Word and fellowship with one another.</p>
+            <p>The R19 group run a separate facebook page, where they push any updates and details for any upcoming event. The button below will take you to that facebook page.</p>
             <div class="facebook-button">
               <a href="https://www.facebook.com/R19-1049563651770492/?fref=ts" target="_blank"><img src="img/facebook-button-white.png" /><span>Take me there!</span></a>
             </div>
@@ -221,14 +226,20 @@
                         <div class="contact-details right">
                           <p><strong>Mailing Address</strong>
                             <br />Redeemer Church
-                            <br />Sean's Address[Insert this]
+                            <br />c/o Sean Fleming
+                            <br />146A South Road
                             <br />New Plymouth 4310</p>
                         </div>
                     </div>
 
                     <div class="four columns">
-                        <h5>Links</h5>
-                        <p>Insert all the linky goodness here... </p>
+                        <h5>Useful Links</h5>
+                        <ul class="contact-links">
+                            <li><a href="https://www.thegospelcoalition.org" target="_blank">The Gospel Coalition</a></li>
+                            <li><a href="http://www.desiringgod.org" target="_blank">Desiring God</a></li>
+                            <li><a href="http://www.kingschurch.co.nz" target="_blank">King's Church (Christchurch)</a></li>
+                            <li><a href="http://www.kingschurch.org.nz" target="_blank">King's Church (Wellington)</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
