@@ -32,6 +32,13 @@
           clickEvent.preventDefault();
           return false;
       });
+
+    // To toggle menu btn states
+      $(".menuBtn").click( function() {
+        $(".menuBtn").toggleClass("toggled");
+        $(".responsive-menu").toggleClass("open");
+        $("body").toggleClass("sidepanel-open");
+      });
     });
     </script>
   </head>
@@ -48,6 +55,7 @@
             <ul>
               <li><a href="index.html#aboutUs">Who we are</a></li>
               <li><a href="index.html#youth">Youth Ministry</a></li>
+              <li><a href="index.html#sermons">Sermons</a></li>
               <li><a href="index.html#location">Location</a></li>
               <li><a href="index.html#contact">Contact us</a></li>
             </ul>
@@ -58,6 +66,7 @@
               <ul>
                 <li><a href="index.html/#aboutUs">Who we are</a></li>
                 <li><a href="index.html#youth">Youth Ministry</a></li>
+                <li><a href="index.html#sermons">Sermons</a></li>
                 <li><a href="index.html#location">Location</a></li>
                 <li><a href="index.html#contact">Contact us</a></li>
               </ul>
