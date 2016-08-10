@@ -559,6 +559,10 @@ footer .container::after {
   margin-bottom: .2rem;
 }
 
+p.no-bMargin {
+  margin-bottom: 0px;
+}
+
 /* ------------- Declaration page --------- */
 .divider {
   height: 2.0px;
