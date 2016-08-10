@@ -550,6 +550,10 @@ footer .container::after {
   }
 }
 
+.contactUs .contact-links ul {
+  margin-bottom: 0.5rem;
+}
+
 .contactUs .contact-links a {
   text-decoration: none;
   color: rgb(229,66,41);
