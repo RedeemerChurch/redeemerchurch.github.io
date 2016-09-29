@@ -471,7 +471,6 @@ footer .container::after {
   margin: 0;
   width: 98%;
   min-height: 750px;
-  padding-top: 56.25%; /* slope */
   width: 100%;
 }
 
