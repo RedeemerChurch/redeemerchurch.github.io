@@ -470,7 +470,7 @@ footer .container::after {
 .mapContainer #map {
   margin: 0;
   width: 98%;
-  height: 750px;
+  min-height: 750px;
   padding-top: 56.25%; /* slope */
   width: 100%;
 }
